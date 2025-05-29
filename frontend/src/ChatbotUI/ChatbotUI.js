@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ChatbotUI.module.css';
-import { FaRobot, FaMicrophone, FaPaperPlane } from 'react-icons/fa';
+import { FaRobot, FaPaperPlane } from 'react-icons/fa';
 
 export default function ChatbotUI() {
   return (
@@ -10,8 +10,12 @@ export default function ChatbotUI() {
           <FaRobot className={styles.botIcon} />
         </div>
         <h2 className={styles.title}>Welcome! How can I help you today?</h2>
+        <div className={styles.messagesArea}>
+          <div className={styles.messageBubble + ' ' + styles.botMessage}>
+            This is where your messages will appear.
+          </div>
+        </div>
         <div className={styles.inputBar}>
-          <FaMicrophone className={styles.inputIcon} />
           <input className={styles.input} placeholder="Type your message here... (Press / for quick commands)" />
           <button className={styles.sendBtn}><FaPaperPlane /></button>
         </div>
